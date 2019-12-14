@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { View, Text,StyleSheet,Image,Modal,ImageBackground,TouchableOpacity,ScrollView,FlatList ,TextInput  } from 'react-native'
+import { View, Text,StyleSheet,Image,Modal,ImageBackground,TouchableOpacity,ScrollView,FlatList ,TextInput ,Dimensions } from 'react-native'
 import {SharedElement} from 'react-navigation-shared-element';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 
 
-
+const { width, height } = Dimensions.get('window')
 
 export default class Location extends Component {
 
@@ -14,7 +14,7 @@ export default class Location extends Component {
     cards:[
       {
         id:1,
-        image:require('../images/friends3.jpeg')
+        image:require('../images/vacation.jpeg')
       },
       {
         id:2,
@@ -26,7 +26,7 @@ export default class Location extends Component {
       },
       {
         id:4,
-        image:require('../images/roba.jpeg')
+        image:require('../images/vacation2.jpg')
       },
       {
         id:4,
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
   modalView:{
-    height:400,
+    height:300,
     width:'100%',
     padding:20,
    borderTopLeftRadius:10,
@@ -175,8 +175,8 @@ const styles = StyleSheet.create({
      
     },
     scrollimage:{
-      height:350,
-      width:250,
+      height:height * 0.35,
+      width:200,
       borderRadius:10,
       marginHorizontal: 20,
     },

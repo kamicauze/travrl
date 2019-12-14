@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View,Dimensions } from 'react-native';
+import { StyleSheet, Text, View,Dimensions,Image } from 'react-native';
 import { createAppContainer, createSwitchNavigator} from 'react-navigation';
 
 import { createStackNavigator, HeaderTitle  } from 'react-navigation-stack';
@@ -21,6 +21,19 @@ import Discover from './screens/Discover.js'
 
 
 // const AppContainer = createAppContainer(AppNavigator);
+class LogoTitle extends React.Component {
+  render() {
+    return (
+     <View style={styles.headContent}>
+       <Text style={{fontSize:16,fontWeight:'bold',marginRight: 10,}}>Chemu</Text>
+     <Image
+                    source={require('./images/profile.jpeg')}  
+                    style={{marginHorizontal:10,width: 40, height: 40, borderRadius: 40/ 2}} 
+                />
+     </View>
+    );
+  }
+}
 
 const bottomnav = createMaterialBottomTabNavigator(
   {
@@ -70,8 +83,15 @@ const bottomnav = createMaterialBottomTabNavigator(
      }}},
     Location:{screen:Location,
     navigationOptions:{
-      headerShown:false
-    }}
+      headerTitle:"TRAVLR",
+      headerRight:<LogoTitle/>
+      // headerRight: ()=>{
+      //   <LogoTitle/>
+      // }
+        
+        
+      }
+    }
     
   },{
     transitionConfig: () => springyFadeIn(),
@@ -97,4 +117,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  headContent:{
+    flexDirection:'row',
+   justifyContent:'center',
+   alignItems:'center',
+   
+  }
 });

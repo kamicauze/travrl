@@ -205,7 +205,7 @@ export default class Welcome extends Component {
                    return(
                     <Image key={face.key}
                     source={face.image}  
-                    style={{marginHorizontal:10,width: 60, height: 60, borderRadius: 60/ 2}} 
+                    style={{marginHorizontal:10,width: 50, height: 50, borderRadius: 50/ 2}} 
                 />   
                    )
 
@@ -239,26 +239,15 @@ const styles = StyleSheet.create({
     //  flex:1,
      height:50,
     marginTop: 20,
-   },
-   
-    placecard:{
-        // flex:1,
-        height:360,
-        width:360,
-        overflow: 'hidden',
-        // borderRadius:7,
-        backgroundColor:"#fff",
-        color:'black',
-        justifyContent:"center",
-        alignItems:'center'
-    },
+   }, 
     cardsholder:{
         flex: 1,
-        paddingTop:50,
+        paddingTop:30,
         alignItems:"center",
         flexDirection:'column',
         justifyContent:"center",
-        height:370,
+        height:height * 0.37,
+       
        
     },
     notactive:{
@@ -290,7 +279,7 @@ const styles = StyleSheet.create({
         color:'black' 
     },
     myfriends:{
-    padding:30,
+    padding:20,
     justifyContent:"center",
    
     },

@@ -7,6 +7,7 @@ import {SharedElement} from 'react-navigation-shared-element';
 import Carousel from 'react-native-snap-carousel';
 
 import TouchableScale from 'react-native-touchable-scale';
+const { width, height } = Dimensions.get('window')
 
 
 
@@ -248,7 +249,7 @@ const styles = StyleSheet.create({
     },
     placecard:{
         // flex:1,
-        height:360,
+        height:height*0.4,
         width:360,
         overflow: 'hidden',
         // borderRadius:7,
